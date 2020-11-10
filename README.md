@@ -3,7 +3,7 @@ READ ME
 We are creating ATM/Simple Banking operations application. Where user can Create account for himself, make the transactions such as withdraw and deposit and check balance.
 
 Setup Your Environment
-1. GitHub Link:- git clone URl
+1. GitHub Link:- git clone https://github.com/shubhamtailong/banking.git
 2. Install Spring boot on your device. By using IDE Market Place or download the project from Spring.io.
 3.  Dependencies :- H2 Database and JPA.
 
