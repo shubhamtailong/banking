@@ -66,7 +66,7 @@ public class MyController {
 		if(customer.getPassword().matches(pass)) {
 			Accounts accounts= accountRepo.findBycustomerId(id);
 			System.out.println(accounts.toString());
-			result="Your Current Balance is:- "+accounts.getBalance();
+			result="Your Current Balance is:- INR "+accounts.getBalance();
 
 		}
 		else 			
@@ -106,7 +106,7 @@ public class MyController {
 			}
 			accountRepo.save(account);
 
-			result= "Your Balance is updated. Current Balance:- "+ account.getBalance();
+			result= "Your Balance is updated. Current Balance:- INR"+ account.getBalance();
 		}
 		else
 			result="Please login with current credentials";
