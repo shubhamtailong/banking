@@ -1,0 +1,159 @@
+package com.myproject.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "Customer")
+public class Customer {
+	
+	
+	private int id;
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	private String firstName;
+	
+
+
+	private String lastName;
+	private String emailId;
+	private long phoneNumber;
+	private String panNumber;
+	private String dob;
+	private String city;
+	private String password;
+	
+	
+	
+	
+
+	public String getDob() {
+		return dob;
+	}
+
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+
+	
+
+
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
+				+ ", phoneNumber=" + phoneNumber + ", panNumber=" + panNumber + ", dob=" + dob + ", city=" + city
+				+ ", password=" + password + "]";
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+
+	public long getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(long phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	
+
+
+	public String getdob() {
+		return dob;
+	}
+
+
+	public void setdob(String dob) {
+		dob = dob;
+	}
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public Customer(int id, String firstName, String lastName, String emailId, long phoneNumber, String panNumber,
+			String dob, String city, String password) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
+		this.phoneNumber = phoneNumber;
+		this.panNumber = panNumber;
+		this.dob = dob;
+		this.city = city;
+		this.password = password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public Customer() {
+		
+	}
+	
+	
+
+}

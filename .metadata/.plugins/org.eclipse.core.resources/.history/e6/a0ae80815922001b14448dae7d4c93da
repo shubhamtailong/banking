@@ -1,0 +1,100 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Main
+{
+  public static  ArrayList<int []> list =new ArrayList<int []>();
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		//You can modify your values here according to provided value
+		 Scanner s= new Scanner(System.in);
+		int N=s.nextInt();
+		int M=s.nextInt();
+		int K=s.nextInt();
+		
+		//Here we are adding treasure spots
+//	int arr[] =new int[]{1,1};
+//	int arr1[] =new int[]{3,2};
+//		list.add(arr);
+	//	list.add(arr1);
+		//list.add([0,1]);
+
+for(int a=0; a<K;a++){
+
+int[] arr = new int[2];
+String str= s.nextLine();
+String [] val= str.split(" ");
+arr[0]=Integer.parseInt(val[0]);
+arr[1]=Integer.parseInt(val[1]);
+list.add(arr);
+
+}
+System.out.println(list);
+		
+		Main code= new Main();
+	//	System.out.println(list.get(0)[1]);
+	
+	//int[][] adjacentCords = new int[N*M][2];
+		for(int i=0;i<N;i++){
+		    for(int j=0;j<M;j++){
+		        int count= code.check(i,j);
+		       if(count>0)
+		      System.out.println(i+" "+j+" "+count);
+		    }
+		    
+		}
+		
+		
+	}
+	
+	public int check(int x,int y){
+	    //int i,j;
+	    int count=0;
+	    for(int l=0;l<list.size();l++){
+	     int  i= list.get(l)[0];
+	        int j=list.get(l)[1];
+	        if(x==i){
+	            if(y==j+1 || y==j-1){
+	                count++;
+	            }
+	            else if(j==y)
+	            return 0;
+	        }
+	        else if(y==j){
+	            if(x==i+1 || x== i-1)
+	            count++;
+	            else if(i==x)
+	            return 0;
+	            
+	        }
+	        else if (i+1==x){
+	            if (j-1==y || j+1==y )
+	            count++;
+	            
+	        }
+	        else if(j+1==y){
+	            if(i-1==x || i+1==x)
+	            count++;
+	        }
+	        
+	          else if (i==x+1){
+	            if (j-1==y || j+1==y )
+	            count++;
+	            
+	        }
+	        else if(j==y+1){
+	            if(i-1==x || i+1==x)
+	            count++;
+	        }
+	        
+	    }
+	    return count;
+	}
+}
+
+

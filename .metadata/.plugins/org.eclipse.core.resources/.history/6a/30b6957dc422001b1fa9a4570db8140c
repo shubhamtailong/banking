@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS Customer;
+
+CREATE TABLE Customer(
+id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+password VARCHAR(50) NOT NULL
+);
+
+INSERT INTO Customer(first_name,last_name,password) VALUES
+('Shubham','Taillong','Shub24'),
+('Shipra','Tailong','Shipra29');
+
+
+
+

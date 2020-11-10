@@ -1,0 +1,40 @@
+package com.myproject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.myproject.model.Accounts;
+import com.myproject.model.Customer;
+import com.myproject.repository.AccountsRepo;
+import com.myproject.repository.CustomerRepository;
+
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+public class MyController {
+	
+	@Autowired
+	private CustomerRepository customerRepo;
+	
+	@Autowired
+	private AccountsRepo accountRepo;
+	
+	@PostMapping("/createAccount")
+	public Customer createCustomer(@RequestBody Customer customer) throws Exception {
+		System.out.println(customer.toString());
+		customerRepo.save(customer);
+		Accounts accounts= new Accounts();
+		accounts.setBalance(0.00);
+		accounts.setIFSC("CITI001");
+		/* accounts.set */
+		accountRepo.save(accounts);
+		return customer; 
+	}
+
+}
+
+

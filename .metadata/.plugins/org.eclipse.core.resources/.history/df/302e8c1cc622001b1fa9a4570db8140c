@@ -1,0 +1,133 @@
+package com.myproject.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "Customer")
+public class Customer {
+	
+	
+	private int id;
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	public long getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	private String firstName;
+	private String lastName;
+	private String emailId;
+	private int phoneNumber;
+	private String PAN;
+	private String DOB;
+	private String city;
+	private String password;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
+				+ ", phoneNumber=" + phoneNumber + ", PAN=" + PAN + ", DOB=" + DOB + ", city=" + city + ", passwrod="
+				+ password + "]";
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+
+	public long getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	public String getPAN() {
+		return PAN;
+	}
+
+
+	public void setPAN(String pAN) {
+		PAN = pAN;
+	}
+
+
+	public String getDOB() {
+		return DOB;
+	}
+
+
+	public void setDOB(String dOB) {
+		DOB = dOB;
+	}
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public Customer() {
+		
+	}
+	
+	
+
+}

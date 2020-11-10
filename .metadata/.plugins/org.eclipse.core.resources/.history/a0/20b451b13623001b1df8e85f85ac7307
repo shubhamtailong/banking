@@ -1,0 +1,12 @@
+package com.myproject.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.myproject.model.Accounts;
+import com.myproject.model.Customer;
+
+public interface  AccountsRepo extends JpaRepository<Accounts,Integer> {
+	
+	public Accounts findById(int id);
+
+}
