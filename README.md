@@ -52,6 +52,6 @@ c.	Body:-
 d.	Output/Response: - “Your Balance is updated. Current Balance:-”<Balance>
 
 
-Test Cases can be found in TEST CASES.xlsx file.
+Test Cases can be found in CustomerInegrationTest.java
 
 UML diagram can be found in UML.png
